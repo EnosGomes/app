@@ -1,1 +1,10 @@
-<p> {{filho}} works!</p>
+<article>
+    <h3>Event Binding</h3>
+    <div>
+        <button (click)="botaoClicado()">Enviar</button>
+    </div>
+
+    <div>
+        <input type="text" (keyup)="onKeyUp($event)" />
+    </div>
+</article>
