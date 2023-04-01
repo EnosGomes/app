@@ -12,8 +12,8 @@ export class UsuarioComponent implements OnInit {
   botaoClicado(){
     alert("botao clicado")
   }
-  onKeyUp(evento : KeyboardEvent){
-    console.log( (<HTMLInputElement>evento.target).value)
+  onKeyUp(evento : any){
+    console.log(evento.target.value)
   }
  
 }
