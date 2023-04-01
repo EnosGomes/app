@@ -1,10 +1,10 @@
 <article>
     <h3>Event Binding</h3>
     <div>
-        <button (click)="botaoClicado()">Enviar</button>
+        <input [(ngModel)]="twoway" type="text" name="twoway">
     </div>
 
     <div>
-        <input type="text" (keyup)="onKeyUp($event)" />
+        <p> Valor: {{twoway}}</p>
     </div>
 </article>
