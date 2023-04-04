@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Person } from './person';
 
 @Component({
   selector: 'app-usuario',
@@ -6,11 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./usuario.component.css']
 })
 export class UsuarioComponent implements OnInit {
-  @Input() filho : any;
-  twoway: string = "";
 
   constructor() { }
 
+  @Input() filho : any;
+  twoway: string = "";
+    
+   pessoas: Person[] = [];
+
+   pessoa = new Person("");
   ngOnInit(): void { }
 
   botaoClicado(){
@@ -19,6 +24,12 @@ export class UsuarioComponent implements OnInit {
 
   onKeyUp(evento : any){
     console.log(evento.target.value)
+  }
+
+  salvarPessoa(){
+    console.log(this.pessoa)
+    this.pessoas.push(this.pessoa);
+
   }
  
 }

@@ -1,10 +1,14 @@
-<article>
-    <h3>Event Binding</h3>
-    <div>
-        <input [(ngModel)]="twoway" type="text" name="twoway">
-    </div>
+<h2>Formulário</h2>
+<div>
+    Nome:
+    <input type="text" [(ngModel)]="pessoa.name">
+</div>
 
-    <div>
-        <p> Valor: {{twoway}}</p>
-    </div>
-</article>
+<button (click)="salvarPessoa()">Salvar</button>
+
+<div>
+    <h3>Lista de pessoas</h3>
+    <tr *ngFor="let p of pessoas">
+        <td>{{p.name}}</td>
+    </tr>
+</div>
