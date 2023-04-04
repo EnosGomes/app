@@ -7,6 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class OutputComponent implements OnInit {
 
+  renderiza = false;
+
   @Input() valor = 0;
 
   @Output() mudouValor = new EventEmitter();
@@ -29,6 +31,10 @@ export class OutputComponent implements OnInit {
     this.mudouValor.emit({
       novoValor: this.valor
     })
+  }
+
+  mostraParagrafo(){
+    this.renderiza = !this.renderiza;
   }
 
 }
