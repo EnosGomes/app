@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   pai = "pai enviando dados pra testar input";
+
+  onMudouValor(evento: any){
+    console.log(evento.novoValor);
+  }
   
 }

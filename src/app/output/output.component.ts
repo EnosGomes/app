@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'contador',
@@ -9,6 +9,8 @@ export class OutputComponent implements OnInit {
 
   @Input() valor = 0;
 
+  @Output() mudouValor = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -17,10 +19,16 @@ export class OutputComponent implements OnInit {
 
   incrementa(){
     this.valor++;
+    this.mudouValor.emit({
+      novoValor: this.valor
+    })
   }
 
   decrementa(){
     this.valor--;
+    this.mudouValor.emit({
+      novoValor: this.valor
+    })
   }
 
 }
