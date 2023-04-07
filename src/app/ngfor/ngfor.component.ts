@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgforComponent implements OnInit {
 
-
+  favorito: boolean = false;
   //nomes = [""];
   nomes: string[] = [];
   constructor() { }
@@ -17,7 +17,11 @@ export class NgforComponent implements OnInit {
 
   adicionaNome(nome:string){
     this.nomes.push(nome);
-    
+
+  }
+
+  favorita(){
+    this.favorito = !this.favorito;
   }
 
 }
