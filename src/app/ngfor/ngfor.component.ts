@@ -17,6 +17,7 @@ export class NgforComponent implements OnInit {
 
   adicionaNome(nome:string){
     this.nomes.push(nome);
+    
   }
 
 }
