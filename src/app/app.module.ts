@@ -7,12 +7,14 @@ import { UsuarioComponent } from './usuario/usuario/usuario.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { OutputComponent } from './output/output.component';
+import { SwitchcaseComponent } from './switchcase/switchcase.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioComponent,
-    OutputComponent
+    OutputComponent,
+    SwitchcaseComponent
   ],
   imports: [
     BrowserModule,

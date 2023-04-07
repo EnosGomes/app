@@ -7,6 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class OutputComponent implements OnInit {
 
+nomes = [];
+
   renderiza = false;
 
   @Input() valor = 0;
