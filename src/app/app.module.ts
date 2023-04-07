@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { OutputComponent } from './output/output.component';
 import { SwitchcaseComponent } from './switchcase/switchcase.component';
+import { NgforComponent } from './ngfor/ngfor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioComponent,
     OutputComponent,
-    SwitchcaseComponent
+    SwitchcaseComponent,
+    NgforComponent
   ],
   imports: [
     BrowserModule,
