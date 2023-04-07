@@ -6,9 +6,12 @@
         <a class="nav-link" [class.active]="aba =='menu'" (click)="aba='menu'">Menu</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Email</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link" [class.active]="aba =='email'" (click)="aba='email'">Email</a>
     </li>
 </ul>
+
+<div class="container" [ngSwitch]="aba">
+    <p *ngSwitchCase="'home'">Home ativada</p>
+    <p *ngSwitchCase="'menu'">menu ativada</p>
+    <p *ngSwitchCase="'email'">email ativada</p>
+</div>
